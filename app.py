@@ -43,7 +43,7 @@ ros = RandomOverSampler(random_state=42)
 X_resampled, y_resampled = ros.fit_resample(X, y)
 
 # Splitting the resampled dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X_resampled, y_resampled, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X_resampled, y_resampled, test_size=0.2, random_state=42,shuffle=True)
 
 # Train the model
 batch_size = 1000
